@@ -36,6 +36,7 @@
              margin: 30px;
              position: absolute;
              right: 500px;
+             line-height: 10px;
          }
          #here{
              position:relative;
@@ -81,17 +82,15 @@
                <div class="form-group row">
                    <div class="col-sm-10">
                    <button type="button" id="searchBtn" class="btn btn-primary">Search</button>
-                   <button type="button" id="searchBtn" class="btn btn-primary">Clear</button>
+                   <button type="button" id="clearBtn" class="btn btn-primary">Clear</button>
                    </div>
                </div>
            </form>
            <div id = "here">
-               <div class="list-group">
-
-<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+               <div id="results" class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
                        <div class="d-flex w-100 justify-content-between">
-                       <h5 class="mb-1">Results</h5>
-                       <small></small>
+                            <h5 class="mb-1">Results</h5>
                        </div>
                    </a>
                </div>

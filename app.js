@@ -7,6 +7,14 @@ var numRecords = "";
 var startYear = "";
 var endYear = "";
 
+$('#clearBtn').on("click", function(event) {
+    search = $('#searchTerm').val("");
+    numRecords = $('#records').val("");
+    startYear = $('#yearOne').val("");
+    endYear = $('#yearTwo').val("");
+    $('li').remove();
+});
+
 $('#searchBtn').on("click", function(event) {
     search = $('#searchTerm').val();
     numRecords = $('#records').val();
@@ -45,6 +53,15 @@ $('#searchBtn').on("click", function(event) {
                     section = article.section_name;
                     url = article.web_url;
                     pubDate = article.pub_date;
+
+                    var listItem = $("<li><h4>" + title + "</h4><br>"
+                    + "<p>" + byline + "</p>"
+                    + "<p>" + pubDate + "</p>"
+                    + '<p class="h6">' + section + "</p>"
+                    + "<p>" + url + "</p>"
+                    + "</li>");
+                    listItem.addClass("list-group-item");
+                    $('#results').append(listItem);
                 } 
             } else {
                 for (i = 0; i < 10; i++) {
@@ -55,6 +72,15 @@ $('#searchBtn').on("click", function(event) {
                     section = article.section_name;
                     url = article.web_url;
                     pubDate = article.pub_date;
+
+                    var listItem = $("<li><h4>" + title + "</h4><br>"
+                    + "<p>" + byline + "</p>"
+                    + "<p>" + pubDate + "</p>"
+                    + '<p class="h6">' + section + "</p>"
+                    + "<p>" + url + "</p>"
+                    + "</li>");
+                    listItem.addClass("list-group-item");
+                    $('#results').append(listItem);
                 }
             }
 
