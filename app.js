@@ -39,6 +39,7 @@ $('#searchBtn').on("click", function(event) {
             if(numRecords) {
                 for (i = 0; i < numRecords; i++) {
                     article = results.response.docs[i];
+                    console.log(article);
                     title = article.headline.main;
                     byline = article.byline.original;
                     section = article.section_name;
@@ -48,6 +49,7 @@ $('#searchBtn').on("click", function(event) {
             } else {
                 for (i = 0; i < 10; i++) {
                     article = results.response.docs[i];
+                    console.log(article);
                     title = article.headline.main;
                     byline = article.byline.original;
                     section = article.section_name;
